@@ -48,12 +48,12 @@ public class ComputeShaderInstancing : MonoBehaviour
                 color = new Color(Random.value,
                                        Random.value,
                                        Random.value),
-                dir = new Vector3(Random.Range(0f, 90f),
-                                       Random.Range(0f, 90f),
-                                       Random.Range(0f, 90f)),
-                scale = new Vector3(Random.Range(1f, 3f),
-                                       Random.Range(1f, 3f),
-                                       Random.Range(1f, 3f)),
+                dir = new Vector3(Random.Range(0f, 180f),
+                                       Random.Range(0f, 180f),
+                                       Random.Range(0f, 180f)),
+                scale = new Vector3(Random.Range(1f, 10f),
+                                       Random.Range(0.1f, 0.5f),
+                                       Random.Range(0.1f, 0.5f)),
             };
         }
 
