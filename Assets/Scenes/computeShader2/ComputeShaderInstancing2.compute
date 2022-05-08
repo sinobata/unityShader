@@ -1,0 +1,28 @@
+#pragma kernel UpdateParticles
+
+struct particle
+{
+    float3 position;
+    float3 velocity;
+    float4 color;
+    float3 dir;
+    float3 scale;
+};
+
+RWStructuredBuffer<particle> _ParticleBuffer;
+float                        _DeltaTime;
+float                        _Time;
+
+[numthreads(100, 1, 1)]
+void UpdateParticles(uint3 id : SV_DispatchThreadID)
+{
+    particle p = _ParticleBuffer[id.x];
+
+    //p.position += p.velocity * _DeltaTime;
+    //p.dir += _DeltaTime ;
+    //p.scale.x *=  2;
+    Vector3 vec = new Vector3(0,0,0);
+    p.dir = Vector3.Angle(vec, p.position);
+
+    _ParticleBuffer[id.x] = p;
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 462e57af09a18794e970777ef7542e7a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - GPUBoidsScript: {instanceID: 0}
+  - InstanceMesh: {instanceID: 0}
+  - InstanceRenderMaterial: {fileID: 2100000, guid: eee79cdccb55d50459e64424c7e12bf7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
