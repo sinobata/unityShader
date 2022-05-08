@@ -59,7 +59,7 @@ namespace GPUBasedTrails
 
             particleBuffer.SetData(
                 Enumerable.Range(0, particleNum)
-                .Select(_ => new Particle() { position = new Vector3(Random.Range(0, initRadius), 20f, Random.Range(0f, 10f)) })
+                .Select(_ => new Particle() { position = new Vector3(Random.Range(0, initRadius), 30f, Random.Range(0f, 10f)) })
                 .ToArray()
             );
         }
