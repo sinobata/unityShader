@@ -32,7 +32,7 @@ float3 curlNoise(float4 p) {
 	float z = p_x1.y - p_x0.y - p_y1.x + p_y0.x;
 
 	const float divisor = 1.0 / (2.0 * e);
-	return normalize(float3(0, -abs(y), 0) * divisor);
+	return normalize(float3(x, y, z) * divisor);
 }
 
 
@@ -71,8 +71,8 @@ void Update(uint3 id : SV_DispatchThreadID)
 		float3 curl = curlNoise(float4(particle.position * _PositionScale, _Time * _TimeScale));
 		particle.position += curl * _NoiseScale;
 		//particle.position += lissajous(float4(particle.position * _PositionScale, _Time * _TimeScale));
-		if(particle.position.y < -100)
-			particle.position.y += 140;
+		// if(particle.position.y < -100)
+		// 	particle.position.y += 140;
 
 		_ParticleBufferWrite[idx] = particle;
 	}
